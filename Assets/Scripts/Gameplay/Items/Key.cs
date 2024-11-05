@@ -5,7 +5,7 @@ using UnityEngine;
 public class Key : Items
 {
 
-    
+    [SerializeField] protected Rigidbody rB;
     public override void Interaction(PlayerInteractor player)
     {
         if (player.handObject == null)
@@ -18,7 +18,7 @@ public class Key : Items
         {
             Ray ray = new Ray(player.Eye.transform.position, player.Eye.transform.forward);
             if(Physics.Raycast(ray,out RaycastHit hit,1))
-                player.DropObject(this, hit.point);
+                player.DropObject(this, hit.point, hit.transform);
             else
                 player.DropObject(this, Vector3.zero);
 
@@ -35,11 +35,11 @@ public class Key : Items
     {
         if (b == true)
         {
-            Rb2D.constraints = RigidbodyConstraints.FreezeAll;
+            rB.constraints = RigidbodyConstraints.FreezeAll;
         }
         else
         {
-            Rb2D.constraints = RigidbodyConstraints.None;
+            rB.constraints = RigidbodyConstraints.None;
         }
     }
 }

@@ -49,9 +49,9 @@ public class PlayerInteractor : MonoBehaviour
         obj.transform.parent = hand;
         obj.transform.position = hand.position;        
     }
-    public void DropObject(Items obj, Vector3 pos)
+    public void DropObject(Items obj, Vector3 pos, Transform toParent = null)
     {
-        obj.transform.parent = null;
+        obj.transform.parent = toParent;
         
         if (pos != Vector3.zero)
             obj.transform.position = pos;

@@ -8,7 +8,7 @@ public class Pickable : MonoBehaviour
     public PlayerInteractor playerGrab;
     public UnityAction<GameObject> myAction;
     public GameObject myObject;
-    [SerializeField] Rigidbody Rb2D;
+    
     
     //private void OnTriggerEnter(Collider other)
     //{
