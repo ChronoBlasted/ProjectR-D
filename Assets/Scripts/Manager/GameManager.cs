@@ -23,6 +23,8 @@ public class GameManager : MonoSingleton<GameManager>
 
         PlayerManager.Instance.Init();
 
+        RoleManager.Instance.Init();
+
         UIManager.Instance.Init();
 
         UpdateStateToGame();

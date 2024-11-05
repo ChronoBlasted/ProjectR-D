@@ -37,6 +37,25 @@ public class PostProcessManager : MonoSingleton<PostProcessManager>
         DOVirtual.Color(vignette.color, vignetteColorDemon, .2f, x => vignette.color.value = x);
     }
 
+    public IEnumerator DoTransformationEffect(float duration)
+    {
+        SetDoe(1);
+        SetDistortion(-50);
+        SetBloom(30);
+        SetChromaticAberration(.5f);
+        SetGrain(.5f);
+
+        yield return new WaitForSeconds(duration);
+
+        SetDoe(100);
+        SetDistortion(0);
+        SetBloom(0);
+        SetChromaticAberration(0);
+        SetGrain(0);
+    }
+
+
+    #region Utils
     public void SetDoe(float newDepthOfField) // Around 1 is good // def : 100
     {
         DOVirtual.Float(doe.focusDistance, newDepthOfField, .2f, x => doe.focusDistance.value = x);
@@ -61,5 +80,6 @@ public class PostProcessManager : MonoSingleton<PostProcessManager>
     {
         DOVirtual.Float(grain.intensity, newGrain, .2f, x => grain.intensity.value = x);
     }
+    #endregion
 }
 

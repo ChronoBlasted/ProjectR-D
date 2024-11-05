@@ -23,9 +23,4 @@ public class PlayerRole : MonoBehaviour
             priestHands.transform.DOScale(Vector3.one, .2f);
         });
     }
-
-    public void RotateCameraRandomly()
-    {
-        //PlayerManager.Instance.PlayerMovement.
-    }
 }

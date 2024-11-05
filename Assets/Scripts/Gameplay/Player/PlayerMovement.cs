@@ -91,16 +91,16 @@ public class PlayerMovement : MonoBehaviour
         cameraFollow.transform.localRotation = Quaternion.Euler(mouseYPos, 0, 0);
     }
 
-    public void MoveCameraRandomly(float timeToMoveRandomly)
+    public void MoveCameraRandomly(float duration)
     {
         canPlayerControlCamera = false;
 
         Sequence moveRandomly = DOTween.Sequence();
 
         moveRandomly
-            .Join(transform.DORotate(new Vector3(0, Random.Range(-90, -45), 0), timeToMoveRandomly / 3f))
-            .Append(transform.DORotate(new Vector3(0, Random.Range(90, 45), 0), timeToMoveRandomly / 3f))
-            .Append(transform.DORotate(new Vector3(0, Random.Range(-90, -45), 0), timeToMoveRandomly / 3f));
+            .Join(transform.DORotate(new Vector3(0, Random.Range(-90, -45), 0), duration / 3f))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(90, 45), 0), duration / 3f))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(-90, -45), 0), duration / 3f));
     }
 
     public void StopMoveRandomly()

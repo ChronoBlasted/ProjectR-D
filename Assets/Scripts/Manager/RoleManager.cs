@@ -22,18 +22,21 @@ public class RoleManager : MonoSingleton<RoleManager>
 
     void SetupRole()
     {
+        PlayerManager.Instance.PlayerMovement.MoveCameraRandomly(transformationTime);
         CameraManager.Instance.ShakeCamera(4, transformationTime);
-        PlayerManager.Instance.PlayerMovement.enabled = false;
 
         if (isPriestTurn)
         {
             PostProcessManager.Instance.SetToPriest();
+            PlayerManager.Instance.PlayerRole.SetToPriest();
         }
         else
         {
             PostProcessManager.Instance.SetToDemon();
+            PlayerManager.Instance.PlayerRole.SetToDemon();
         }
 
+        StartCoroutine(PostProcessManager.Instance.DoTransformationEffect(transformationTime));
         StartCoroutine(EndSetupRoleCor());
     }
 
@@ -41,7 +44,7 @@ public class RoleManager : MonoSingleton<RoleManager>
     {
         yield return new WaitForSeconds(transformationTime);
 
-        PlayerManager.Instance.PlayerMovement.enabled = true;
+        PlayerManager.Instance.PlayerMovement.StopMoveRandomly();
     }
 
     public void ChangeRole()
