@@ -17,6 +17,9 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Awake()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         PostProcessManager.Instance.Init();
 
         CameraManager.Instance.Init();
@@ -33,7 +36,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         _gameState = newState;
 
-        Debug.LogWarning("New GameState : " + _gameState);
+        // Debug.Log("New GameState : " + _gameState);
 
         switch (_gameState)
         {

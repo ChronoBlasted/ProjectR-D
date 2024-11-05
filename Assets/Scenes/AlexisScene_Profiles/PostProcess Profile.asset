@@ -62,7 +62,7 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 1
+    value: 0
   focusDistance:
     overrideState: 1
     value: 100
@@ -73,7 +73,7 @@ MonoBehaviour:
     overrideState: 0
     value: 39
   kernelSize:
-    overrideState: 1
+    overrideState: 0
     value: 1
 --- !u!114 &-4520740073384546894
 MonoBehaviour:
@@ -160,8 +160,8 @@ MonoBehaviour:
     overrideState: 1
     value: 0.3
   roundness:
-    overrideState: 1
-    value: 0.8
+    overrideState: 0
+    value: 0
   rounded:
     overrideState: 0
     value: 0

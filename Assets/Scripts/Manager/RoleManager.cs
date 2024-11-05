@@ -6,6 +6,7 @@ using UnityEngine;
 public class RoleManager : MonoSingleton<RoleManager>
 {
     [SerializeField] float transformationTime = 5f;
+    [SerializeField] int turnTime = 120;
     bool isPriestTurn;
 
     public void Init()
@@ -23,17 +24,15 @@ public class RoleManager : MonoSingleton<RoleManager>
     void SetupRole()
     {
         PlayerManager.Instance.PlayerMovement.MoveCameraRandomly(transformationTime);
-        CameraManager.Instance.ShakeCamera(4, transformationTime);
+        CameraManager.Instance.ShakeCamera(.25f, transformationTime);
 
         if (isPriestTurn)
         {
-            PostProcessManager.Instance.SetToPriest();
-            PlayerManager.Instance.PlayerRole.SetToPriest();
+            PostProcessManager.Instance.SetToPriest(transformationTime);
         }
         else
         {
-            PostProcessManager.Instance.SetToDemon();
-            PlayerManager.Instance.PlayerRole.SetToDemon();
+            PostProcessManager.Instance.SetToDemon(transformationTime);
         }
 
         StartCoroutine(PostProcessManager.Instance.DoTransformationEffect(transformationTime));
@@ -45,6 +44,18 @@ public class RoleManager : MonoSingleton<RoleManager>
         yield return new WaitForSeconds(transformationTime);
 
         PlayerManager.Instance.PlayerMovement.StopMoveRandomly();
+
+        if (isPriestTurn)
+        {
+            PlayerManager.Instance.PlayerRole.SetToPriest();
+        }
+        else
+        {
+            PlayerManager.Instance.PlayerRole.SetToDemon();
+        }
+
+
+        StartCoroutine(UIManager.Instance.GameView.UpdateTimer(turnTime));
     }
 
     public void ChangeRole()

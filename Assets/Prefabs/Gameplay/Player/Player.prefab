@@ -298,6 +298,8 @@ GameObject:
   - component: {fileID: 7165857066990052203}
   - component: {fileID: 7272755856275898507}
   - component: {fileID: 6133738975728384938}
+  - component: {fileID: 2772144704273671589}
+  - component: {fileID: 7163573908500795376}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -409,3 +411,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2772144704273671589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7305837447829967896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfc7f104d4ad7a4094071b28fc09165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <PlayerMovement>k__BackingField: {fileID: 7165857066990052203}
+  <PlayerRole>k__BackingField: {fileID: 7163573908500795376}
+--- !u!114 &7163573908500795376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7305837447829967896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7c3fcee45201a44bd0a62cdbae6611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priestHands: {fileID: 0}
+  demonHands: {fileID: 0}

@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     float runMultiplier = 1f;
     float mouseYPos;
 
-    bool canPlayerControlCamera = true;
+    bool canPlayerMove = true;
 
     Vector3 movementInput, lookInput;
 
@@ -53,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleMove()
     {
+        if (canPlayerMove == false) return;
+
         movementInput *= moveSpeed;
         movementInput *= runMultiplier;
         movementInput = new Vector3(movementInput.x, rb.velocity.y, movementInput.y);
@@ -80,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleRotation()
     {
-        if (canPlayerControlCamera == false) return;
+        if (canPlayerMove == false) return;
 
         float mouseXPos = lookInput.x * mouseXSensitivity;
         mouseYPos -= lookInput.y * mouseYSensitivity;
@@ -93,19 +95,26 @@ public class PlayerMovement : MonoBehaviour
 
     public void MoveCameraRandomly(float duration)
     {
-        canPlayerControlCamera = false;
+        canPlayerMove = false;
 
-        Sequence moveRandomly = DOTween.Sequence();
+        rb.velocity = Vector3.zero;
 
-        moveRandomly
-            .Join(transform.DORotate(new Vector3(0, Random.Range(-90, -45), 0), duration / 3f))
-            .Append(transform.DORotate(new Vector3(0, Random.Range(90, 45), 0), duration / 3f))
-            .Append(transform.DORotate(new Vector3(0, Random.Range(-90, -45), 0), duration / 3f));
+
+        Sequence moveXRandomly = DOTween.Sequence();
+
+        Ease easeMovement = Ease.InOutSine;
+
+        moveXRandomly
+            .Join(transform.DORotate(new Vector3(0, Random.Range(-5, -20), 0), duration / 4f).SetEase(easeMovement))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(5, 20), 0), duration / 4f).SetEase(easeMovement))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(-5, -20), 0), duration / 4f).SetEase(easeMovement))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(5, 20), 0), duration / 8f).SetEase(easeMovement))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(-5, -20), 0), duration / 8f).SetEase(easeMovement));
     }
 
     public void StopMoveRandomly()
     {
-        canPlayerControlCamera = true;
+        canPlayerMove = true;
     }
 
     #endregion
@@ -113,6 +122,8 @@ public class PlayerMovement : MonoBehaviour
     #region Jump
     void Jump(InputAction.CallbackContext context)
     {
+        if (canPlayerMove == false) return;
+
         if (IsGrounded()) rb.AddForce(Vector3.up * jumpForce);
     }
 

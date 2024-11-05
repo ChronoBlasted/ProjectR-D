@@ -10,17 +10,17 @@ public class PlayerRole : MonoBehaviour
 
     public void SetToDemon()
     {
-        priestHands.transform.DOScale(Vector3.zero, .2f).OnComplete(() =>
+       /* priestHands.transform.DOScale(Vector3.zero, .2f).OnComplete(() =>
         {
             demonHands.transform.DOScale(Vector3.one, .2f);
-        });
+        });*/
     }
 
     public void SetToPriest()
     {
-        demonHands.transform.DOScale(Vector3.zero, .2f).OnComplete(() =>
+/*        demonHands.transform.DOScale(Vector3.zero, .2f).OnComplete(() =>
         {
             priestHands.transform.DOScale(Vector3.one, .2f);
-        });
+        });*/
     }
 }
