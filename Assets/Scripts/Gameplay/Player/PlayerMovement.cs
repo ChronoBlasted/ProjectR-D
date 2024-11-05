@@ -20,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float minYRotation = -90f;
 
     [Space(20)]
+    [Header("Interact")]
+    public PlayerInteractor myInteractor;
+
+    [Space(20)]
     [Header("Ref")]
     [SerializeField] Rigidbody rb;
     [SerializeField] Transform cameraFollow;
@@ -67,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Interact(InputAction.CallbackContext context)
     {
-        Debug.Log("Interact");
+        myInteractor.TryInteraction();
     }
 
     void Jump(InputAction.CallbackContext context)
