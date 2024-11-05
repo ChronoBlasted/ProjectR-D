@@ -15,7 +15,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     public GameState GameState { get => _gameState; }
 
-    private void Awake()
+    private void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
