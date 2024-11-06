@@ -3,26 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Tiroir : Items
+public class Tiroir : Item
 {
     private bool isOpen;
     [SerializeField] Transform tiroir;
     public override void Interaction(PlayerInteractor player)
     {
-        base.Interaction(player);
-
-        if (isOpen)
+        if (player.handObject)
         {
-            tiroir.DOKill();
-            tiroir.DOLocalMoveZ(0.075f, 1);
+            player.handObject.Interaction(player);
+            return;
         }
         else
         {
-            tiroir.DOKill();
-            tiroir.DOLocalMoveZ(.8f, 1);
-           
+            if (isOpen)
+            {
+                tiroir.DOKill();
+                tiroir.DOLocalMoveZ(0.075f, 1);
+            }
+            else
+            {
+                tiroir.DOKill();
+                tiroir.DOLocalMoveZ(.8f, 1);
+            }
+            isOpen = !isOpen;
         }
-        isOpen = !isOpen;
     }
 
 
