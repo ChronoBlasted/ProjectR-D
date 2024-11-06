@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4025675359505392578}
   - component: {fileID: 7274464637110342019}
   m_Layer: 0
-  m_Name: Bougie
+  m_Name: Candle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

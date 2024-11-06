@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202176679110006786}
   m_Layer: 12
-  m_Name: Tiroir
+  m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,69 +32,6 @@ Transform:
   - {fileID: 8797753902592331736}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8164979593828003875
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4645494765936475239}
-  - component: {fileID: 9113374000106814938}
-  - component: {fileID: 2952963319151995862}
-  m_Layer: 13
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4645494765936475239
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8164979593828003875}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0305}
-  m_LocalScale: {x: -0.002, y: 0, z: -0.002}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1712061692175492097}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!33 &9113374000106814938
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8164979593828003875}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &2952963319151995862
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8164979593828003875}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &9051496321888806963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,6 +80,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7959762596227801743, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 412d2e18ab59c524f8fbaa39542f3484, type: 2}
     - target: {fileID: -2122284662806887831, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
       propertyPath: m_Layer
       value: 13
@@ -159,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 6825866362715842283, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 412d2e18ab59c524f8fbaa39542f3484, type: 2}
     - target: {fileID: 7664890150991907890, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
       propertyPath: m_LocalScale.x
       value: 45
@@ -181,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7664890150991907890, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.056
+      value: 0.042
       objectReference: {fileID: 0}
     - target: {fileID: 7664890150991907890, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -205,10 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7664890150991907890, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4645494765936475239}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -2122284662806887831, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
       insertIndex: -1
