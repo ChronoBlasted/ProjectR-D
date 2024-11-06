@@ -2316,7 +2316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332737628043066530, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 169.54
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2332737628043066530, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2328,7 +2328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332737628043066530, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -43.55
+      value: -0.005
       objectReference: {fileID: 0}
     - target: {fileID: 2363442103814885990, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2722,6 +2722,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6202201757848233339, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202201757848233339, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202201757848233339, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6359882153458563799, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2816,6 +2828,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7059525558461479908, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480883112349755477, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480883112349755477, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480883112349755477, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
+      propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8077334782094967998, guid: 83e711c2478b50f479097011ef84cae1, type: 3}
