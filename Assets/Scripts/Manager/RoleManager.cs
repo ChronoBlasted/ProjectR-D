@@ -25,6 +25,7 @@ public class RoleManager : MonoSingleton<RoleManager>
     {
         PlayerManager.Instance.PlayerMovement.MoveCameraRandomly(transformationTime);
         CameraManager.Instance.ShakeCamera(.25f, transformationTime);
+        UIManager.Instance.GameView.SetupQuestLayout(isPriestTurn, transformationTime);
 
         if (isPriestTurn)
         {
@@ -53,7 +54,6 @@ public class RoleManager : MonoSingleton<RoleManager>
         {
             PlayerManager.Instance.PlayerRole.SetToDemon();
         }
-
 
         StartCoroutine(UIManager.Instance.GameView.UpdateTimer(turnTime));
     }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Items : MonoBehaviour
+public class Item : MonoBehaviour
 {
     public UnityAction<PlayerInteractor> myAction;
-    [SerializeField] protected Rigidbody Rb2D;
+    
     public void Awake()
     {
         myAction += Interaction;

@@ -109,11 +109,11 @@ public class PlayerMovement : MonoBehaviour
         Ease easeMovement = Ease.InOutSine;
 
         moveXRandomly
-            .Join(transform.DORotate(new Vector3(0, Random.Range(-5, -20), 0), duration / 4f).SetEase(easeMovement))
-            .Append(transform.DORotate(new Vector3(0, Random.Range(5, 20), 0), duration / 4f).SetEase(easeMovement))
-            .Append(transform.DORotate(new Vector3(0, Random.Range(-5, -20), 0), duration / 4f).SetEase(easeMovement))
-            .Append(transform.DORotate(new Vector3(0, Random.Range(5, 20), 0), duration / 8f).SetEase(easeMovement))
-            .Append(transform.DORotate(new Vector3(0, Random.Range(-5, -20), 0), duration / 8f).SetEase(easeMovement));
+            .Join(transform.DORotate(new Vector3(0, Random.Range(-5, -20), 0), duration / 4f, RotateMode.LocalAxisAdd).SetEase(easeMovement))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(5, 20), 0), duration / 4f, RotateMode.LocalAxisAdd).SetEase(easeMovement))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(-5, -20), 0), duration / 4f, RotateMode.LocalAxisAdd).SetEase(easeMovement))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(5, 20), 0), duration / 8f, RotateMode.LocalAxisAdd).SetEase(easeMovement))
+            .Append(transform.DORotate(new Vector3(0, Random.Range(-5, -20), 0), duration / 8f, RotateMode.LocalAxisAdd).SetEase(easeMovement));
     }
 
     public void StopMoveRandomly()
