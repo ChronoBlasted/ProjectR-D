@@ -29,12 +29,12 @@ public class PostProcessManager : MonoSingleton<PostProcessManager>
 
     public void SetToDemon(float duration = .2f)
     {
-        DOVirtual.Color(vignette.color, vignetteColorPriest, duration, x => vignette.color.value = x);
+        DOVirtual.Color(vignette.color, vignetteColorDemon, duration, x => vignette.color.value = x);
     }
 
     public void SetToPriest(float duration = .2f)
     {
-        DOVirtual.Color(vignette.color, vignetteColorDemon, duration, x => vignette.color.value = x);
+        DOVirtual.Color(vignette.color, vignetteColorPriest, duration, x => vignette.color.value = x);
     }
 
     public IEnumerator DoTransformationEffect(float duration)
