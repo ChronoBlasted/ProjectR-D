@@ -9,6 +9,7 @@ public class PickableItem : Item
     [SerializeField] protected Rigidbody rB;
     [SerializeField] Vector3 V3;
     
+    
     public override void Interaction(PlayerInteractor player)
     {
         if (player.handObject == null)
@@ -28,7 +29,7 @@ public class PickableItem : Item
                 {
                     player.DropObject(this, hit.point);
                 }               
-                else 
+                else if(hit.collider.gameObject.layer == 11|| hit.collider.gameObject.layer == 12 || hit.collider.gameObject.layer == 13)
                     player.DropObject(this, hit.point, hit.transform);            
             }
             else
@@ -56,5 +57,11 @@ public class PickableItem : Item
         {
             rB.constraints = RigidbodyConstraints.None;
         }
+    }
+
+    public override string SetActionDebug(Item onHand = null)
+    {
+        return base.SetActionDebug(onHand);
+
     }
 }

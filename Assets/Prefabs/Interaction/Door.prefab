@@ -47,6 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d31f9b28aa535479eedf0168477035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lst_Actions:
+  - item: {fileID: 0}
+    name: Ouvrir/Fermer
+  - item: {fileID: 0}
+    name: Lock/Unlock
   Key: {fileID: 0}
   isOpen: 0
   isLocked: 0

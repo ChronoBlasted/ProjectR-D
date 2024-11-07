@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DemonRoom : Room
 {
-
+    /*
     public override void OnTriggerEn(Collider other)
     {
         base.OnTriggerEn(other);
@@ -39,4 +39,5 @@ public class DemonRoom : Room
             }
         }
     }
+    */
 }
