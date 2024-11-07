@@ -7,13 +7,32 @@ using Random = UnityEngine.Random;
 
 public class SpawnerManager : MonoSingleton<SpawnerManager>
 {
+    [SerializeField] GameObject demonKey, priestKey;
     [SerializeField] List<Transform> playerSpawnPoint = new List<Transform>();
+    [SerializeField] List<Transform> keySpawnPoint = new List<Transform>();
     [SerializeField] List<ItemInWorld> itemsInWorld = new List<ItemInWorld>();
 
     public void Init()
     {
-        PlayerManager.Instance.transform.position = playerSpawnPoint[Random.Range(0, playerSpawnPoint.Count)].position;
-        PlayerManager.Instance.transform.rotation = playerSpawnPoint[Random.Range(0, playerSpawnPoint.Count)].rotation;
+        var randomSpawnPoint = playerSpawnPoint[Random.Range(0, playerSpawnPoint.Count)];
+
+        PlayerManager.Instance.transform.position = randomSpawnPoint.position;
+        PlayerManager.Instance.transform.rotation = randomSpawnPoint.rotation;
+
+        var demonKeySpawn = keySpawnPoint[Random.Range(0, playerSpawnPoint.Count)];
+
+        keySpawnPoint.Remove(demonKeySpawn);
+
+        var priestKeySpawn = keySpawnPoint[Random.Range(0, playerSpawnPoint.Count)];
+
+        demonKey.transform.position = demonKeySpawn.position;
+        demonKey.transform.rotation = demonKeySpawn.rotation;
+        demonKey.transform.parent = demonKeySpawn;
+
+        priestKey.transform.position = priestKeySpawn.position;
+        priestKey.transform.rotation = priestKeySpawn.rotation;
+        priestKey.transform.parent = priestKeySpawn;
+
     }
 
     public void SetupItem(ResourceType Type, int amount)

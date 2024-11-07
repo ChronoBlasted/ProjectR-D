@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DemonRoom : Room
 {
-    /*
+
     public override void OnTriggerEn(Collider other)
     {
         base.OnTriggerEn(other);
@@ -18,6 +18,10 @@ public class DemonRoom : Room
 
             if (items.Data.Type == ResourceToCollect) // Si cette items démon est dans la liste dans les missions
             {
+                Candle candle = other.GetComponent<Candle>();
+
+                if (candle.type == Candle.Type.Priest) return;
+
                 QuestManager.Instance.demonQuest.UpdateQuest(-1);
 
                 if (QuestManager.Instance.demonQuest.amountToCollect <= 0)
@@ -42,9 +46,13 @@ public class DemonRoom : Room
 
             if (items.Data.Type == ResourceToCollect) // Si cette items démon est dans la liste dans les missions
             {
+                Candle candle = other.GetComponent<Candle>();
+
+                if (candle.type == Candle.Type.Priest) return;
+
                 QuestManager.Instance.demonQuest.UpdateQuest(1);
             }
         }
     }
-    */
+
 }

@@ -15,6 +15,10 @@ public class PriestRoom : Room
 
             if (items.Data.Type == ResourceToCollect) // Si cette items démon est dans la liste dans les missions
             {
+                Candle candle = other.GetComponent<Candle>();
+
+                if (candle.type == Candle.Type.Demon) return;
+
                 QuestManager.Instance.demonQuest.UpdateQuest(-1);
 
                 if (QuestManager.Instance.priestQuest.amountToCollect <= 0)
@@ -39,6 +43,10 @@ public class PriestRoom : Room
 
             if (items.Data.Type == ResourceToCollect) // Si cette items démon est dans la liste dans les missions
             {
+                Candle candle = other.GetComponent<Candle>();
+
+                if (candle.type == Candle.Type.Demon) return;
+
                 QuestManager.Instance.demonQuest.UpdateQuest(1);
             }
         }
