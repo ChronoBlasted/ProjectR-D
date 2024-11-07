@@ -7,6 +7,9 @@ public class Items : MonoBehaviour
 {
     public UnityAction<PlayerInteractor> myAction;
     [SerializeField] protected Rigidbody Rb2D;
+    [SerializeField] ResourceObject data;
+    public ResourceObject Data { get => data; set => data = value; }
+
     public void Awake()
     {
         myAction += Interaction;
@@ -46,7 +49,7 @@ public class Items : MonoBehaviour
 
     public virtual void Interaction(PlayerInteractor player)
     {
-        
+
     }
 
 }
