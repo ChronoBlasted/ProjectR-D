@@ -24,7 +24,11 @@ public class GameManager : MonoSingleton<GameManager>
 
         CameraManager.Instance.Init();
 
+        SpawnerManager.Instance.Init();
+
         PlayerManager.Instance.Init();
+
+        QuestManager.Instance.Init();
 
         RoleManager.Instance.Init();
 

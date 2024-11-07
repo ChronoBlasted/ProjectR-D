@@ -8,18 +8,21 @@ public class QuestLayout : MonoBehaviour
 {
     [SerializeField] TMP_Text title;
 
-    public void Init(string questTitle)
+    public void SetText(string questTitle, int amount)
     {
         title.text = questTitle;
+
+        if (amount <= 0) CompleteQuest();
+        else UncompleteQuest();
     }
 
-    public void CompleteQuest()
+    void CompleteQuest()
     {
         title.fontStyle = TMPro.FontStyles.Strikethrough;
     }
 
 
-    public void UncompleteQuest()
+    void UncompleteQuest()
     {
         title.fontStyle = TMPro.FontStyles.Normal;
     }

@@ -294,8 +294,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 511.99997, y: -43.55}
-  m_SizeDelta: {x: 169.54, y: 0}
+  m_AnchoredPosition: {x: 511.99997, y: -0.005}
+  m_SizeDelta: {x: 0.01, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5221809589421986956
 CanvasRenderer:
@@ -808,6 +808,18 @@ PrefabInstance:
       propertyPath: cornerImg
       value: 
       objectReference: {fileID: 255314041657972874}
+    - target: {fileID: 6947060628812873730, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
+      propertyPath: lastQuestTxt
+      value: 
+      objectReference: {fileID: 8694852320484713073}
+    - target: {fileID: 6947060628812873730, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
+      propertyPath: bringToQuestTxt
+      value: 
+      objectReference: {fileID: 1000366027145341860}
+    - target: {fileID: 6947060628812873730, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
+      propertyPath: unlockAccessToQuestTxt
+      value: 
+      objectReference: {fileID: 5920497330649727087}
     - target: {fileID: 7131195783841460807, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 4
@@ -906,6 +918,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4873863062234724577, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
   m_PrefabInstance: {fileID: 290347876385090349}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5920497330649727087 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6209990197661035330, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
+  m_PrefabInstance: {fileID: 290347876385090349}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5fa6af067f92a449a89b8b82f3939a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7237125237568351023 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6947060628812873730, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
@@ -1071,6 +1094,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1176122458990259009, guid: 0092657897085e344951b71fe4170ec3, type: 3}
   m_PrefabInstance: {fileID: 1076056224209944773}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4491218351013393186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3511374101857940455, guid: 0092657897085e344951b71fe4170ec3, type: 3}
+  m_PrefabInstance: {fileID: 1076056224209944773}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5fa6af067f92a449a89b8b82f3939a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3503465396905687335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1220,6 +1254,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0092657897085e344951b71fe4170ec3, type: 3}
+--- !u!114 &10176063326915264 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3511374101857940455, guid: 0092657897085e344951b71fe4170ec3, type: 3}
+  m_PrefabInstance: {fileID: 3503465396905687335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5fa6af067f92a449a89b8b82f3939a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2363442103814885990 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1176122458990259009, guid: 0092657897085e344951b71fe4170ec3, type: 3}
@@ -1453,6 +1498,18 @@ PrefabInstance:
       propertyPath: cornerImg
       value: 
       objectReference: {fileID: 3231150370933166762}
+    - target: {fileID: 6947060628812873730, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
+      propertyPath: lastQuestTxt
+      value: 
+      objectReference: {fileID: 10176063326915264}
+    - target: {fileID: 6947060628812873730, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
+      propertyPath: bringToQuestTxt
+      value: 
+      objectReference: {fileID: 4491218351013393186}
+    - target: {fileID: 6947060628812873730, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
+      propertyPath: unlockAccessToQuestTxt
+      value: 
+      objectReference: {fileID: 7199600872786824513}
     - target: {fileID: 7349871075831566537, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1550,6 +1607,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27b5ebf8f693ad8479f0d52e5b2e493e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7199600872786824513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6209990197661035330, guid: fe779f1aaecc5fa4386ff247078d4d4f, type: 3}
+  m_PrefabInstance: {fileID: 3874309504089941507}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5fa6af067f92a449a89b8b82f3939a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &8531857659041062626 stripped
@@ -1714,6 +1782,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0092657897085e344951b71fe4170ec3, type: 3}
+--- !u!114 &1000366027145341860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3511374101857940455, guid: 0092657897085e344951b71fe4170ec3, type: 3}
+  m_PrefabInstance: {fileID: 4420542234531878979}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5fa6af067f92a449a89b8b82f3939a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &3245554472752739074 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1176122458990259009, guid: 0092657897085e344951b71fe4170ec3, type: 3}
@@ -1881,3 +1960,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1176122458990259009, guid: 0092657897085e344951b71fe4170ec3, type: 3}
   m_PrefabInstance: {fileID: 5192855130747654550}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8694852320484713073 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3511374101857940455, guid: 0092657897085e344951b71fe4170ec3, type: 3}
+  m_PrefabInstance: {fileID: 5192855130747654550}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5fa6af067f92a449a89b8b82f3939a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class Item : MonoBehaviour
 {
     public UnityAction<PlayerInteractor> myAction;
-    
     public void Awake()
     {
         myAction += Interaction;
@@ -18,7 +17,7 @@ public class Item : MonoBehaviour
 
     public virtual void Interaction(PlayerInteractor player)
     {
-        
+
     }
 
 }
