@@ -19,6 +19,13 @@ public class DemonRoom : Room
             if (items.Data.Type == ResourceToCollect) // Si cette items démon est dans la liste dans les missions
             {
                 QuestManager.Instance.demonQuest.UpdateQuest(-1);
+
+                if (QuestManager.Instance.demonQuest.amountToCollect <= 0)
+                {
+                    GameManager.Instance.UpdateStateToEnd();
+
+                    UIManager.Instance.EndGameView.UpdateData(false);
+                }
             }
         }
     }

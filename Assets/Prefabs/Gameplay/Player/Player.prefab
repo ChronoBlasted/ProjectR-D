@@ -417,7 +417,7 @@ MonoBehaviour:
     m_Bits: 55
   mouseXSensitivity: 0.2
   mouseYSensitivity: 0.2
-  maxYRotation: 50
+  maxYRotation: 80
   minYRotation: -90
   myInteractor: {fileID: 9104133598298342955}
   rb: {fileID: 653807541654938025}
