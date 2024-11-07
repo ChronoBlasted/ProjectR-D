@@ -211,6 +211,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a69c5f683ef4d06409fdd883353c7fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lst_Actions:
+  - item: {fileID: 0}
+    global: 1
+    name: OUVRIR
   tiroir: {fileID: 1712061692175492097}
 --- !u!64 &8610721944299488533
 MeshCollider:

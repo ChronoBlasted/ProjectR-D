@@ -47,6 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc222b84f12150542b1449aa053b5025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lst_Actions:
+  - item: {fileID: 0}
+    name: Prendre
+  - item: {fileID: 8354532502730695993}
+    name: Poser
   rB: {fileID: 5106171214281799403}
   V3: {x: 0, y: 0, z: 0}
 --- !u!65 &5342593217256125333
@@ -93,7 +98,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

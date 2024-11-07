@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine.Events;
 public class Item : MonoBehaviour
 {
     public UnityAction<PlayerInteractor> myAction;
+    public List<ActionName> lst_Actions;
+
     public void Awake()
     {
         myAction += Interaction;
@@ -13,35 +16,34 @@ public class Item : MonoBehaviour
     public void OnDestroy()
     {
         myAction = null;
+    }    
+
+
+    [Serializable]
+    public class ActionName
+    {
+        public Item item = null;
+        public bool global;
+        public string name;
     }
-    #region WithTrigger
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if(other.TryGetComponent<PlayerInteractor>(out PlayerInteractor player))
-    //    {            
-    //        if(playerGrab == null)
-    //        {
-    //            playerGrab = player;
 
-    //            if (playerGrab.Interaction == null)
-    //            {
-    //                playerGrab.Interaction = myAction;
-    //            }
-    //        }
-    //    }
-    //}
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.TryGetComponent<PlayerInteractor>(out PlayerInteractor player))
-    //    {            
-    //        if (playerGrab.Interaction == myAction)
-    //        playerGrab.Interaction = null;
+    public virtual string SetActionDebug(Item onHand = null)
+    {
+        foreach (var v in lst_Actions)
+        {
+            if (v.global)
+                return v.name;
+            if(v.item == onHand)
+            {
+                return v.name;
+            }
+            
+        }
 
-    //        playerGrab = null;
-    //    }        
-    //}
-    #endregion
+        return null;
+
+    }
 
     public virtual void Interaction(PlayerInteractor player)
     {
