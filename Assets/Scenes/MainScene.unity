@@ -547,6 +547,10 @@ PrefabInstance:
       propertyPath: Key
       value: 
       objectReference: {fileID: 1965601697}
+    - target: {fileID: 5450897277170096330, guid: 48172ff098fb0b14f842b8d73ed1c5d8, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -686,6 +690,10 @@ PrefabInstance:
       propertyPath: Key
       value: 
       objectReference: {fileID: 1965601696}
+    - target: {fileID: 6041886782923850252, guid: c3bbcb5a350970741b4ad1027688be0d, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1583,6 +1591,18 @@ PrefabInstance:
     - target: {fileID: 2312911213691535432, guid: 4348633c969e9184c8de5a050d93627b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185951749195275869, guid: 4348633c969e9184c8de5a050d93627b, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755245050647504747, guid: 4348633c969e9184c8de5a050d93627b, type: 3}
+      propertyPath: isOpen
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755245050647504747, guid: 4348633c969e9184c8de5a050d93627b, type: 3}
+      propertyPath: isLocked
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7593715206122158634, guid: 4348633c969e9184c8de5a050d93627b, type: 3}
       propertyPath: m_Name
