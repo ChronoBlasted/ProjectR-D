@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class PlayerInteractor : MonoBehaviour
 {
     public UnityAction<PlayerInteractor> Interaction;    
-    public Items interactObject,handObject;
+    public Item interactObject,handObject;
     public Transform hand, Eye;
     
     [SerializeField] LayerMask myInteractionLayer;
@@ -15,7 +15,7 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (Physics.Raycast(Eye.transform.position, Eye.transform.forward, out RaycastHit hit, myInteractionLayer))
         {
-            if (hit.collider.gameObject.TryGetComponent<Items>(out Items item))
+            if (hit.collider.gameObject.TryGetComponent<Item>(out Item item))
             {
                 if(item != interactObject)
                     interactObject = item;
@@ -43,15 +43,15 @@ public class PlayerInteractor : MonoBehaviour
         }        
     }
 
-    public void PickObject(Items obj)
+    public void PickObject(Item obj)
     {
         handObject = obj;
         obj.transform.parent = hand;
         obj.transform.position = hand.position;        
     }
-    public void DropObject(Items obj, Vector3 pos)
+    public void DropObject(Item obj, Vector3 pos, Transform toParent = null)
     {
-        obj.transform.parent = null;
+        obj.transform.SetParent(toParent,true);
         
         if (pos != Vector3.zero)
             obj.transform.position = pos;
@@ -68,4 +68,7 @@ public class PlayerInteractor : MonoBehaviour
        
         Interaction.Invoke(this);        
     }
+
+
+
 }

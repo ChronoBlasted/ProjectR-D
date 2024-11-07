@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Door : Items
+public class Door : Item
 {
-    public Items Key;
-    [SerializeField] bool isOpen;
+    public Item Key;
+    [SerializeField] bool isOpen, isLocked;
 
     public override void Interaction(PlayerInteractor player)
     {
@@ -28,6 +28,13 @@ public class Door : Items
         }
     }
 
+    public void LockUnlock()
+    {
+        if (isOpen)
+        {
+
+        }
+    }
 
 
 
