@@ -39,6 +39,7 @@ public class PickableItem : Item
     }
     public void ChangePhysics(bool b)
     {
+        transform.DOKill();
         transform.DORotate(V3, 0.5f);
         
         if (b == true)
