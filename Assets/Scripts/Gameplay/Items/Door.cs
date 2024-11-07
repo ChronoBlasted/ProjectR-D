@@ -25,6 +25,7 @@ public class Door : Item
                     Open();
                 return;
             }
+                Open();
         }
     }
 
