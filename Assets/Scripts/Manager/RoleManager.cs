@@ -16,7 +16,6 @@ public class RoleManager : MonoSingleton<RoleManager>
         isPriestTurn = randomStart > .5f;
 
         SetupRole();
-        SetupQuest();
     }
 
     #region Player Role
@@ -63,15 +62,6 @@ public class RoleManager : MonoSingleton<RoleManager>
         isPriestTurn = !isPriestTurn;
 
         SetupRole();
-    }
-
-    #endregion
-
-    #region Quest
-
-    void SetupQuest()
-    {
-        UIManager.Instance.GameView.UpdateQuest();
     }
 
     #endregion

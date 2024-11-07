@@ -11,9 +11,17 @@ public class GameView : View
 
     Tweener timerTween;
 
+    public void UpdateQuest(Quest priestBringToQuest, Quest demonBringToQuest)
+    {
+        priestQuestLayout.Init(priestBringToQuest);
+        demonQuestLayout.Init(demonBringToQuest);
+    }
+
+
     public void UpdateQuest()
     {
-        // priestQuestLayout
+        priestQuestLayout.Init(QuestManager.Instance.priestQuest);
+        demonQuestLayout.Init(QuestManager.Instance.demonQuest);
     }
 
     public IEnumerator UpdateTimer(int totalSeconds)

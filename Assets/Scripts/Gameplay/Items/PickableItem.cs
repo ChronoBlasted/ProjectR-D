@@ -8,7 +8,9 @@ public class PickableItem : Item
 {
     [SerializeField] protected Rigidbody rB;
     [SerializeField] Vector3 V3;
-    
+
+    [SerializeField] ResourceObject data;
+    public ResourceObject Data { get => data; set => data = value; }
 
     public override void Interaction(PlayerInteractor player)
     {
@@ -16,13 +18,13 @@ public class PickableItem : Item
         {
             player.PickObject(this);
             ChangePhysics(true);
-            
+
             return;
         }
         else if (player.handObject == this)
         {
-            Ray ray = new (player.Eye.transform.position, player.Eye.transform.forward);
-            
+            Ray ray = new(player.Eye.transform.position, player.Eye.transform.forward);
+
             if (Physics.Raycast(ray, out RaycastHit hit, 1))
                 player.DropObject(this, hit.point, hit.transform);
             else
@@ -41,10 +43,10 @@ public class PickableItem : Item
     {
         transform.DOKill();
         transform.DORotate(V3, 0.5f);
-        
+
         if (b == true)
         {
-            rB.constraints = RigidbodyConstraints.FreezeAll;            
+            rB.constraints = RigidbodyConstraints.FreezeAll;
         }
         else
         {
