@@ -42,7 +42,6 @@ public class PlayerInteractor : MonoBehaviour
             Interaction = handObject.myAction;
         }        
     }
-
     public void PickObject(Item obj)
     {
         handObject = obj;

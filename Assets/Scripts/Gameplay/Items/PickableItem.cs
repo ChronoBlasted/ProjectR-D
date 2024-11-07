@@ -9,7 +9,6 @@ public class PickableItem : Item
     [SerializeField] protected Rigidbody rB;
     [SerializeField] Vector3 V3;
     
-
     public override void Interaction(PlayerInteractor player)
     {
         if (player.handObject == null)
@@ -23,10 +22,17 @@ public class PickableItem : Item
         {
             Ray ray = new (player.Eye.transform.position, player.Eye.transform.forward);
             
-            if (Physics.Raycast(ray, out RaycastHit hit, 1))
-                player.DropObject(this, hit.point, hit.transform);
+            if (Physics.Raycast(ray, out RaycastHit hit, 2))
+            {
+                if(hit.collider.gameObject.layer == 14) //si c'est le SOL
+                {
+                    player.DropObject(this, hit.point);
+                }               
+                else 
+                    player.DropObject(this, hit.point, hit.transform);            
+            }
             else
-                player.DropObject(this, Vector3.zero);
+                //player.DropObject(this, hit.point);
 
             ChangePhysics(false);
 

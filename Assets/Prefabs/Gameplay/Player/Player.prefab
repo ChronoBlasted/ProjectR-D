@@ -445,7 +445,7 @@ MonoBehaviour:
   Eye: {fileID: 5118292688067036878}
   myInteractionLayer:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 24576
 --- !u!114 &6434214236989020157
 MonoBehaviour:
   m_ObjectHideFlags: 0
