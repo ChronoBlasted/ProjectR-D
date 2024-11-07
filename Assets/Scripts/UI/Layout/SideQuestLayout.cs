@@ -9,7 +9,7 @@ public class SideQuestLayout : MonoBehaviour
 {
     [SerializeField] Image cornerImg;
     [SerializeField] CanvasGroup cg;
-    [SerializeField] TMP_Text unlockAccessToQuestTxt, bringToQuestTxt, lastQuestTxt;
+    [SerializeField] QuestLayout unlockAccessToQuestTxt, bringToQuestTxt, lastQuestTxt;
 
     public void SetActive(bool isActive, float duration = .2f)
     {
@@ -29,8 +29,6 @@ public class SideQuestLayout : MonoBehaviour
 
     public void Init(Quest bringToQuest)
     {
-        bringToQuestTxt.text = "Collect " + bringToQuest.amountToCollect.ToString() + " " + bringToQuest.resourceToCollect.ToString() + " to your room";
+        bringToQuestTxt.SetText("Collect " + bringToQuest.amountToCollect.ToString() + " " + bringToQuest.resourceToCollect.ToString() + " to your room", bringToQuest.amountToCollect);
     }
-
-
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quest : MonoBehaviour
+public class Quest
 {
     public int amountToCollect;
     public ResourceType resourceToCollect;
@@ -13,7 +13,9 @@ public class Quest : MonoBehaviour
 
         if (amountToCollect <= 0)
         {
-            // Quest Complete
+            amountToCollect = 0;
         }
+
+        UIManager.Instance.GameView.UpdateQuest();
     }
 }

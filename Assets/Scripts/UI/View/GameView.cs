@@ -17,6 +17,13 @@ public class GameView : View
         demonQuestLayout.Init(demonBringToQuest);
     }
 
+
+    public void UpdateQuest()
+    {
+        priestQuestLayout.Init(QuestManager.Instance.priestQuest);
+        demonQuestLayout.Init(QuestManager.Instance.demonQuest);
+    }
+
     public IEnumerator UpdateTimer(int totalSeconds)
     {
         if (timerTween != null)

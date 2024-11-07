@@ -19,7 +19,7 @@ public enum DemonItems
 
     Candles = ResourceType.Candles,
 
-    DemonHead = ResourceType.DemonHead,
+    //DemonHead = ResourceType.DemonHead,
 }
 
 public enum PriestItems
@@ -28,5 +28,5 @@ public enum PriestItems
 
     Candles = ResourceType.Candles,
 
-    Bible = ResourceType.Bible,
+    //Bible = ResourceType.Bible,
 }
