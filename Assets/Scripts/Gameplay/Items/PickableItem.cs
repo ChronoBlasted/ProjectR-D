@@ -8,8 +8,11 @@ public class PickableItem : Item
 {
     [SerializeField] protected Rigidbody rB;
     [SerializeField] Vector3 V3;
-    
-    
+
+    [SerializeField] ResourceObject data;
+    public ResourceObject Data { get => data; set => data = value; }
+
+
     public override void Interaction(PlayerInteractor player)
     {
         if (player.handObject == null)

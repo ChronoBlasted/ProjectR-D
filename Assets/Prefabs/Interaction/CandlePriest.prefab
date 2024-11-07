@@ -47,9 +47,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb68e78ba2bfbbe468074c390562f3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lst_Actions: []
+  lst_Actions:
+  - item: {fileID: 0}
+    global: 0
+    name: Pick
+  - item: {fileID: 9105395112329914651}
+    global: 0
+    name: Drop
   rB: {fileID: 4025675359505392578}
   V3: {x: 0, y: 0, z: 0}
+  data: {fileID: 0}
+  type: 1
 --- !u!54 &4025675359505392578
 Rigidbody:
   m_ObjectHideFlags: 0

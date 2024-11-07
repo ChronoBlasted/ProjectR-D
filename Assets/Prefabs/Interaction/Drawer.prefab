@@ -213,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lst_Actions:
   - item: {fileID: 0}
+    global: 1
     name: OUVRIR
   tiroir: {fileID: 1712061692175492097}
 --- !u!64 &8610721944299488533

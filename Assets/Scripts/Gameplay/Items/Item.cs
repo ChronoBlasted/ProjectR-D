@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
 {
     public UnityAction<PlayerInteractor> myAction;
     public List<ActionName> lst_Actions;
+
     public void Awake()
     {
         myAction += Interaction;
@@ -31,14 +32,13 @@ public class Item : MonoBehaviour
     {
         foreach (var v in lst_Actions)
         {
+            if (v.global)
+                return v.name;
             if(v.item == onHand)
             {
                 return v.name;
             }
-            if (v.item == onHand)
-            {
-
-            }
+            
         }
 
         return null;
