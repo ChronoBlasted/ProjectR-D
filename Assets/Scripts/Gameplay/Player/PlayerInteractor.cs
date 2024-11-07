@@ -20,7 +20,7 @@ public class PlayerInteractor : MonoBehaviour
 
     public void Update()
     {   
-        if (Physics.Raycast(Eye.transform.position, Eye.transform.forward, out RaycastHit hit, 2, myInteractionLayer))
+        if (Physics.Raycast(Eye.transform.position, Eye.transform.forward, out RaycastHit hit, 5, myInteractionLayer))
         {
             if (hit.collider.gameObject.TryGetComponent<Item>(out Item item)) // Si l'objet à un script
             {

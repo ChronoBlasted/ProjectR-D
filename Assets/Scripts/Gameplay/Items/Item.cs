@@ -34,6 +34,7 @@ public class Item : MonoBehaviour
         {
             if (v.global)
                 return v.name;
+
             if(v.item == onHand)
             {
                 return v.name;
