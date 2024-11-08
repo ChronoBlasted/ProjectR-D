@@ -194,6 +194,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6695861457677187713, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
+--- !u!23 &2533000703267884760 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6825866362715842283, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
+  m_PrefabInstance: {fileID: 9051496321888806963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8297197192828928210 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1060825381113702625, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
@@ -215,6 +220,8 @@ MonoBehaviour:
   - item: {fileID: 0}
     global: 1
     name: OUVRIR
+  rdr: {fileID: 2533000703267884760}
+  outlineMaterial: {fileID: 0}
   tiroir: {fileID: 1712061692175492097}
 --- !u!64 &8610721944299488533
 MeshCollider:

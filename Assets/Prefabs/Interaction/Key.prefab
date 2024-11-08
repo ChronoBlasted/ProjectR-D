@@ -49,11 +49,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lst_Actions:
   - item: {fileID: 0}
+    global: 0
     name: Prendre
   - item: {fileID: 8354532502730695993}
+    global: 0
     name: Poser
+  rdr: {fileID: 326242457939488497}
+  outlineMaterial: {fileID: 0}
   rB: {fileID: 5106171214281799403}
   V3: {x: 0, y: 0, z: 0}
+  data: {fileID: 0}
 --- !u!65 &5342593217256125333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -163,7 +168,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e62cb3a8651a8b47a6408fac3ed2f0e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

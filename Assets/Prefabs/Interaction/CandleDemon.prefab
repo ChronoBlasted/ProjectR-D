@@ -54,6 +54,8 @@ MonoBehaviour:
   - item: {fileID: 9105395112329914651}
     global: 0
     name: Drop
+  rdr: {fileID: 7156516496707049915}
+  outlineMaterial: {fileID: 0}
   rB: {fileID: 4025675359505392578}
   V3: {x: 0, y: 0, z: 0}
   data: {fileID: 0}
@@ -187,6 +189,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06efcc04c5a658c4c9ea869d8996b09d, type: 3}
+--- !u!23 &7156516496707049915 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 06efcc04c5a658c4c9ea869d8996b09d, type: 3}
+  m_PrefabInstance: {fileID: 8399380945904387391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8293977993063015124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 06efcc04c5a658c4c9ea869d8996b09d, type: 3}

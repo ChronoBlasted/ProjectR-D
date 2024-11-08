@@ -443,10 +443,12 @@ MonoBehaviour:
   handObject: {fileID: 0}
   hand: {fileID: 842880955077615367}
   Eye: {fileID: 5118292688067036878}
-  interactionText: {fileID: 0}
+  interactionText: {fileID: 2004828149422494168}
   myInteractionLayer:
     serializedVersion: 2
-    m_Bits: 24576
+    m_Bits: 30720
+  pRole: {fileID: 6268229688467315152}
+  outlineMat: {fileID: 2100000, guid: cd54ef922656fab44b1275d617f25407, type: 2}
 --- !u!114 &6434214236989020157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,6 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priestHands: {fileID: 0}
   demonHands: {fileID: 0}
+  currentRole: 0
 --- !u!114 &5683698234313596766
 MonoBehaviour:
   m_ObjectHideFlags: 0

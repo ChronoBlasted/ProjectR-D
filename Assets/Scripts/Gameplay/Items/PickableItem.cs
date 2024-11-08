@@ -6,10 +6,12 @@ using DG.Tweening;
 
 public class PickableItem : Item
 {
+    
+    [Header("PickableItem")]
     [SerializeField] protected Rigidbody rB;
     [SerializeField] Vector3 V3;
-
     [SerializeField] ResourceObject data;
+
     public ResourceObject Data { get => data; set => data = value; }
 
 
@@ -62,9 +64,4 @@ public class PickableItem : Item
         }
     }
 
-    public override string SetActionDebug(Item onHand = null)
-    {
-        return base.SetActionDebug(onHand);
-
-    }
 }
