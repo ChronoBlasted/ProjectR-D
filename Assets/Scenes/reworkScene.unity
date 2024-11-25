@@ -779,6 +779,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1574201438}
     m_Modifications:
+    - target: {fileID: 3383396888707224520, guid: 9ee2d6d09ce964e4b8a38c05b4d1a771, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.043
+      objectReference: {fileID: 0}
     - target: {fileID: 3465198681288063924, guid: 9ee2d6d09ce964e4b8a38c05b4d1a771, type: 3}
       propertyPath: m_Name
       value: priest-room
@@ -1049,6 +1053,11 @@ Transform:
   - {fileID: 214549136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1051363515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6839173731059436945, guid: 9e869fb3e6bf3a845be713e35539314b, type: 3}
+  m_PrefabInstance: {fileID: 1928286399504398659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1068615328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1370,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1574201438}
     m_Modifications:
+    - target: {fileID: 4592182031183581816, guid: 0c6399c0b0e3c2a429f6402f13ac0af6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1334
+      objectReference: {fileID: 0}
     - target: {fileID: 6490526464918299603, guid: 0c6399c0b0e3c2a429f6402f13ac0af6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 93.86
@@ -1456,6 +1469,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2312911213691535432, guid: 4348633c969e9184c8de5a050d93627b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421208801701989846, guid: 4348633c969e9184c8de5a050d93627b, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7593715206122158634, guid: 4348633c969e9184c8de5a050d93627b, type: 3}
@@ -1723,6 +1740,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7643162547890720404, guid: 48172ff098fb0b14f842b8d73ed1c5d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643162547890720404, guid: 48172ff098fb0b14f842b8d73ed1c5d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.081
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1744,6 +1769,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c584f214939ae498900087a3df3c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2070079608 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9173567531596382957, guid: 9e869fb3e6bf3a845be713e35539314b, type: 3}
+  m_PrefabInstance: {fileID: 1928286399504398659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2117087257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2106,6 +2136,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3993476024185425485, guid: 9e869fb3e6bf3a845be713e35539314b, type: 3}
+      propertyPath: playerSpawnPoint.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993476024185425485, guid: 9e869fb3e6bf3a845be713e35539314b, type: 3}
       propertyPath: keySpawnPoint.Array.data[10]
       value: 
       objectReference: {fileID: 0}
@@ -2157,6 +2191,14 @@ PrefabInstance:
       propertyPath: keySpawnPoint.Array.data[22]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3993476024185425485, guid: 9e869fb3e6bf3a845be713e35539314b, type: 3}
+      propertyPath: playerSpawnPoint.Array.data[2]
+      value: 
+      objectReference: {fileID: 1051363515}
+    - target: {fileID: 3993476024185425485, guid: 9e869fb3e6bf3a845be713e35539314b, type: 3}
+      propertyPath: playerSpawnPoint.Array.data[3]
+      value: 
+      objectReference: {fileID: 2070079608}
     - target: {fileID: 3993476024185425485, guid: 9e869fb3e6bf3a845be713e35539314b, type: 3}
       propertyPath: itemsInWorld.Array.data[0].GameObjects.Array.data[0]
       value: 
