@@ -95,6 +95,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &7385637004387070072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8352409442014159441}
+  m_Layer: 13
+  m_Name: KeySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8352409442014159441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385637004387070072}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0031, y: 0.00468, z: 0.0326}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1712061692175492097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8454692084330900172
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +314,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7664890150991907890, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5108496095367544581}
+    - targetCorrespondingSourceObject: {fileID: 7664890150991907890, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8352409442014159441}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -2122284662806887831, guid: 40e770dda1743c54d97770fda3374bb1, type: 3}
       insertIndex: -1
@@ -354,10 +388,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lst_Actions:
-  - item: {fileID: 0}
+  - item:
+    - {fileID: 0}
     global: 1
     name: OUVRIR
   rdr: {fileID: 2533000703267884760}
+  type: 0
   tiroir: {fileID: 1712061692175492097}
 --- !u!64 &8610721944299488533
 MeshCollider:

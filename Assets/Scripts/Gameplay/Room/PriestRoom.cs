@@ -17,7 +17,7 @@ public class PriestRoom : Room
             {
                 Candle candle = other.GetComponent<Candle>();
 
-                if (candle.type == Candle.Type.Demon) return;
+                if (candle.camp == Candle.Camp.Demon) return;
 
                 QuestManager.Instance.demonQuest.UpdateQuest(-1);
 
@@ -45,7 +45,7 @@ public class PriestRoom : Room
             {
                 Candle candle = other.GetComponent<Candle>();
 
-                if (candle.type == Candle.Type.Demon) return;
+                if (candle.camp == Candle.Camp.Demon) return;
 
                 QuestManager.Instance.demonQuest.UpdateQuest(1);
             }

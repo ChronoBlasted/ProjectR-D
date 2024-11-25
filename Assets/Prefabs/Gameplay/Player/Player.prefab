@@ -447,6 +447,8 @@ MonoBehaviour:
   myInteractionLayer:
     serializedVersion: 2
     m_Bits: 30720
+  pRole: {fileID: 6268229688467315152}
+  outlineMat: {fileID: 0}
 --- !u!114 &6434214236989020157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,6 +520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priestHands: {fileID: 0}
   demonHands: {fileID: 0}
+  currentRole: 0
 --- !u!114 &5683698234313596766
 MonoBehaviour:
   m_ObjectHideFlags: 0
