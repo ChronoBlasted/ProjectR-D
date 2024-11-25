@@ -49,7 +49,7 @@ public class UIManager : MonoSingleton<UIManager>
 
         if (_currentView != null)
         {
-            newPanel.CloseView();
+            _currentView.CloseView();
         }
 
         _currentView = newPanel;

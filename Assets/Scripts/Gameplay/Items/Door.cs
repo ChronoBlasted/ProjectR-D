@@ -16,7 +16,6 @@ public class Door : Item
         {
             Close();
         }
-
         else
         {
             if (player.handObject == Key)
