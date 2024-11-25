@@ -7,6 +7,13 @@ public class Door : Item
 {
     public Item Key;
     [SerializeField] bool isOpen, isLocked;
+    private Collider collider;
+
+    public override void Awake()
+    {
+        base.Awake();
+        collider = GetComponent<Collider>();
+    }
 
     public override void Interaction(PlayerInteractor player)
     {
@@ -25,9 +32,17 @@ public class Door : Item
                     Open();
                 return;
             }
+            
+            if(!isLocked)
                     Open();
         }
     }
+
+    void ToggleCollision(bool b)
+    {
+        collider.enabled = b;
+    }
+
 
     public bool LockUnlock()
     {
@@ -38,13 +53,21 @@ public class Door : Item
     public void Open()
     {
         transform.DOKill();
-        transform.DORotate(new Vector3(0, 90, 0), 1);
-        isOpen = true;
+        ToggleCollision(false);
+        transform.DORotate(new Vector3(0, 90, 0), 1).OnComplete(() =>
+        {
+            ToggleCollision(true);
+        }); 
+        
     }
     public void Close()
     {
-        transform.DOKill();
-        transform.DORotate(new Vector3(0, 0, 0), 1);
+         transform.DOKill();
+        ToggleCollision(false);
+        transform.DORotate(new Vector3(0, 0, 0), 1).OnComplete(() =>
+        {
+            ToggleCollision(true);
+        });
         isOpen = false;
     }
 

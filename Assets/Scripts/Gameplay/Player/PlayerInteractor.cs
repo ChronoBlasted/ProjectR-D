@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-//using UnityEngine.UI;
+
 using TMPro;
 
 public class PlayerInteractor : MonoBehaviour
@@ -35,6 +35,7 @@ public class PlayerInteractor : MonoBehaviour
 
                     if(handObject)
                         interactionText.text = item.SetActionDebug(true ,this);
+
                     else
                         interactionText.text = item.SetActionDebug(true, this);
                 }
@@ -67,13 +68,13 @@ public class PlayerInteractor : MonoBehaviour
 
     public void SetInteractText(string str)
     { 
-    
+        
     }
 
     public void SetObjectToInteract()
     {        
         if (interactObject)
-        {                        
+        {   
             Interaction = interactObject.myAction;
         }
         else if (handObject)

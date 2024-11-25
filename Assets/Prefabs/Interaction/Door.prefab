@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 29295740827730726}
   - component: {fileID: 3987142159712833709}
   - component: {fileID: 2103387255110361877}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,10 +55,9 @@ MonoBehaviour:
     global: 0
     name: Lock/Unlock
   rdr: {fileID: 8230872264404945423}
-  outlineMaterial: {fileID: 0}
   Key: {fileID: 0}
   isOpen: 0
-  isLocked: 0
+  isLocked: 1
 --- !u!65 &3987142159712833709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119,6 +118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tavern-83-door_single
       objectReference: {fileID: 0}
+    - target: {fileID: 1304312192624514285, guid: 3f03b051b82fb6644b47df71d9a97db4, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1850041780982582137, guid: 3f03b051b82fb6644b47df71d9a97db4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.045
@@ -158,6 +161,10 @@ PrefabInstance:
     - target: {fileID: 1850041780982582137, guid: 3f03b051b82fb6644b47df71d9a97db4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499025541949092325, guid: 3f03b051b82fb6644b47df71d9a97db4, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

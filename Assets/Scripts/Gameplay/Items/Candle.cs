@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Candle : PickableItem
 {
-    public Type type;
+    public Camp camp;
 
-    public enum Type
+    public enum Camp 
     {
         Neutral,
         Priest,
         Demon
     }
-
-
 
 }

@@ -11,14 +11,21 @@ public class Item : MonoBehaviour
     
     [Header("Outline")]
     [SerializeField] Renderer rdr;
-    public Material outlineMaterial;
     private Material[] originalMaterials;
+    
+    public ObjectType type;
 
-    public void Awake()
+    public enum ObjectType
+    {
+        Ritual, Clefs, Cachette, doors 
+    }
+
+
+    public virtual void Awake()
     {
         myAction += Interaction;
 
-        originalMaterials = rdr.materials;//recup la liste de material du rdr sans le outline
+        originalMaterials = rdr.materials; //recup la liste de material du rdr sans le outline
 
         //AddOutline(outlineMaterial);
     }
@@ -30,7 +37,6 @@ public class Item : MonoBehaviour
     }
     public void AddOutline(Material outlineMat)
     {
-
         Material[] materialsWithOutline = new Material[originalMaterials.Length + 1]; // nouvelle liste de mat + 1 vide
         originalMaterials.CopyTo(materialsWithOutline, 0);//met le mat originals en index 0
         materialsWithOutline[originalMaterials.Length] = outlineMat;
@@ -46,7 +52,7 @@ public class Item : MonoBehaviour
     [Serializable]
     public class ActionName
     {
-        public Item item = null;
+        public List<Item> item;
         public bool global;
         public string name;
     }
@@ -65,14 +71,13 @@ public class Item : MonoBehaviour
                 player.outlineMat.color = Color.red;
             }
             AddOutline(player.outlineMat);
-
         }
 
         foreach (var v in lst_Actions)
         {
             if (v.global)
                 return v.name;
-            if(v.item == player.handObject)
+            if (v.item.Contains(player.handObject)) 
             {
                 return v.name;
             }
