@@ -9,17 +9,11 @@ public class Tiroir : Item
     [SerializeField] Transform tiroir;
     public override void Interaction(PlayerInteractor player)
     {
-        if (player.handObject)
-        {
-            player.handObject.Interaction(player);
-            return;
-        }
-        else
-        {
+        
             if (isOpen)
             {
                 tiroir.DOKill();
-                tiroir.DOLocalMoveZ(0.075f, 1);
+                tiroir.DOLocalMoveZ(0.0f, 1);
             }
             else
             {
@@ -27,7 +21,6 @@ public class Tiroir : Item
                 tiroir.DOLocalMoveZ(.8f, 1);
             }
             isOpen = !isOpen;
-        }
     }
 
 

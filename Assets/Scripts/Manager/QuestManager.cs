@@ -2,7 +2,6 @@ using BaseTemplate.Behaviours;
 using System;
 using System.Linq;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class QuestManager : MonoSingleton<QuestManager>
 {
@@ -42,7 +41,7 @@ public class QuestManager : MonoSingleton<QuestManager>
     {
         return new Quest
         {
-            amountToCollect = Random.Range(1, 3),
+            amountToCollect = UnityEngine.Random.Range(1, 3),
             resourceToCollect = isPriestQuest ?
             (ResourceType)Enum.Parse(typeof(ResourceType), Enum.GetNames(typeof(PriestItems)).Skip(1).Randomize().First()) :
             (ResourceType)Enum.Parse(typeof(ResourceType), Enum.GetNames(typeof(DemonItems)).Skip(1).Randomize().First()),
