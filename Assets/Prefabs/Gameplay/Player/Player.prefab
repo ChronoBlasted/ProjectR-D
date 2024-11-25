@@ -414,7 +414,7 @@ MonoBehaviour:
   jumpForce: 300
   groundLayermask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 16439
   mouseXSensitivity: 0.2
   mouseYSensitivity: 0.2
   maxYRotation: 80
