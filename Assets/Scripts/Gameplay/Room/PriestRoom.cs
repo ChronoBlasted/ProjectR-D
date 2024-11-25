@@ -23,9 +23,9 @@ public class PriestRoom : Room
 
                 if (QuestManager.Instance.priestQuest.amountToCollect <= 0)
                 {
-                    GameManager.Instance.UpdateStateToEnd();
-
                     UIManager.Instance.EndGameView.UpdateData(true);
+
+                    GameManager.Instance.UpdateStateToEnd();
                 }
             }
         }

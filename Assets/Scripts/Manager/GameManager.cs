@@ -40,7 +40,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         _gameState = newState;
 
-        // Debug.Log("New GameState : " + _gameState);
+        Debug.Log("New GameState : " + _gameState);
 
         switch (_gameState)
         {

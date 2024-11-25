@@ -26,9 +26,9 @@ public class DemonRoom : Room
 
                 if (QuestManager.Instance.demonQuest.amountToCollect <= 0)
                 {
-                    GameManager.Instance.UpdateStateToEnd();
-
                     UIManager.Instance.EndGameView.UpdateData(false);
+
+                    GameManager.Instance.UpdateStateToEnd();
                 }
             }
         }
