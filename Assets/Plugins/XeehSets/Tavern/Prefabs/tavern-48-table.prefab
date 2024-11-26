@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3258751662496395301}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: tavern-48-table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7913153828390226787}
   - component: {fileID: 1939744983906200666}
   - component: {fileID: 2552399559880120332}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}

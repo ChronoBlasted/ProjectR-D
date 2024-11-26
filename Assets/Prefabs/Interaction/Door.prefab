@@ -48,16 +48,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lst_Actions:
-  - item: {fileID: 0}
+  - item:
+    - {fileID: 0}
     global: 0
-    name: Ouvrir/Fermer
-  - item: {fileID: 0}
+    name: Open/Close
+  - item:
+    - {fileID: 0}
     global: 0
     name: Lock/Unlock
   rdr: {fileID: 8230872264404945423}
+  type: 0
   Key: {fileID: 0}
   isOpen: 0
-  isLocked: 1
+  isLocked: 0
 --- !u!65 &3987142159712833709
 BoxCollider:
   m_ObjectHideFlags: 0

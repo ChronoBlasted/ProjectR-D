@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8677547049938824468}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: church-12-cata_wallskull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3903715827605192818}
   - component: {fileID: 5067702377497174013}
   - component: {fileID: 4386186420933802577}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}

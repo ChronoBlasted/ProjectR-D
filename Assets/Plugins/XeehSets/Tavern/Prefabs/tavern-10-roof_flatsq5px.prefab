@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2877306688926662815}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: tavern-10-roof_flatsq5px
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 9062449327508661193}
   - component: {fileID: 4712679034591575878}
   - component: {fileID: 31650362941929523}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}

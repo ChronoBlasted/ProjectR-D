@@ -448,7 +448,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 30720
   pRole: {fileID: 6268229688467315152}
-  outlineMat: {fileID: 0}
+  outlineMat: {fileID: 2100000, guid: cd54ef922656fab44b1275d617f25407, type: 2}
 --- !u!114 &6434214236989020157
 MonoBehaviour:
   m_ObjectHideFlags: 0
