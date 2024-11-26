@@ -1,0 +1,24 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+public class Slot : MonoBehaviour
+{
+    public int index;
+    public bool toggle;
+    public Vector3 position;
+    Collider Collider; 
+
+    public void SetBool()
+    {	
+	toggle = !toggle; 
+    }
+    public void Pipi()
+    {
+
+    }
+
+
+}

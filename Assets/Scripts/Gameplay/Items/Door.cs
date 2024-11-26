@@ -37,12 +37,10 @@ public class Door : Item
                     Open();
         }
     }
-
     void ToggleCollision(bool b)
     {
         collider.enabled = b;
     }
-
 
     public bool LockUnlock()
     {

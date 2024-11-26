@@ -61,7 +61,7 @@ MonoBehaviour:
   rB: {fileID: 4025675359505392578}
   V3: {x: 0, y: 0, z: 0}
   data: {fileID: 0}
-  camp: 0
+  camp: 2
 --- !u!54 &4025675359505392578
 Rigidbody:
   m_ObjectHideFlags: 0
