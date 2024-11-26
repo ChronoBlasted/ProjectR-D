@@ -23,13 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6092809575467800646}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6695087621993468065}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6542901841498899823
 GameObject:
@@ -42,6 +43,7 @@ GameObject:
   - component: {fileID: 6695087621993468065}
   - component: {fileID: 7710959130880103819}
   - component: {fileID: 3496068180094813653}
+  - component: {fileID: 3501078477584272501}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -56,12 +58,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6542901841498899823}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7582994756468803949}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &7710959130880103819
 MeshRenderer:
@@ -74,10 +77,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -102,6 +107,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &3496068180094813653
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -110,6 +116,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6542901841498899823}
   m_Mesh: {fileID: -7469637343734227062}
+--- !u!65 &3501078477584272501
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6542901841498899823}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 1, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!43 &-7469637343734227062
 Mesh:
   m_ObjectHideFlags: 0
@@ -117,7 +144,7 @@ Mesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Root
-  serializedVersion: 10
+  serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
@@ -264,12 +291,14 @@ Mesh:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.25, y: 0.5, z: 0.15}
   m_MeshUsageFlags: 0
+  m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshMetrics[0]: 1
   m_MeshMetrics[1]: 1
   m_MeshOptimizationFlags: 1
   m_StreamData:
+    serializedVersion: 2
     offset: 0
     size: 0
     path: 
@@ -285,16 +314,21 @@ Texture2D:
     Hash: 00000000000000000000000000000000
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
   serializedVersion: 2
   m_Width: 16
   m_Height: 16
   m_CompleteImageSize: 1024
+  m_MipsStripped: 0
   m_TextureFormat: 5
   m_MipCount: 1
   m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
+  m_IsPreProcessed: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
   m_StreamingMipmaps: 0
   m_StreamingMipmapsPriority: 0
+  m_VTOnly: 0
   m_AlphaIsTransparency: 0
   m_ImageCount: 1
   m_TextureDimension: 2
@@ -308,28 +342,34 @@ Texture2D:
     m_WrapW: 0
   m_LightmapFormat: 0
   m_ColorSpace: 0
+  m_PlatformBlob: 
   image data: 1024
   _typelessdata: ff774a31ff774a31ff774a31ff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff4a593dff4a593dff4a593dff774a31ff774a31ff774a31ff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff4a593dff4a593dff4a593dff774a31ff774a31ff774a31ff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff774a31ff774a31ff8f5a3cff774a31ff774a31ff4a593dff4a593dff4a593dff774a31ff774a31ff774a31ff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff774a31ff774a31ff774a31ff774a31ff774a31ff4a593dff4a593dff4a593dff774a31ff774a31ff774a31ff8f5a3cff8f5a3cff8f5a3cff8f5a3cff8f5a3cff774a31ff774a31ff774a31ff774a31ff774a31ff4a593dff4a593dff4a593dff8f5a3cff8f5a3cff774a31ff774a31ff774a31ff774a31ff774a31ff774a31ff4a593dff4a593dff4a593dff556c48ff556c48ff556c48cdcdcdcdcdcdcdcdff8f5a3cff8f5a3cff774a31ff774a31ff774a31ff774a31ff774a31ff774a31ff4a593dff4a593dff4a593dff556c48ff556c48ff556c48cdcdcdcdcdcdcdcdff8f5a3cff8f5a3cff8f5a3cff774a31ff774a31ff774a31ff774a31ff774a31ff4a593dff4a593dff4a593dff556c48ff556c48ff556c48cdcdcdcdcdcdcdcdff8f5a3cff8f5a3cff774a31ff774a31ff774a31ff774a31ff774a31ff774a31ff4a593dff4a593dff4a593dcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdff8f5a3cff8f5a3cff774a31ff774a31ff774a31cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdff774a31ff774a31ff774a31ff774a31ff4a593dff4a593dff4a593dff691717ff691717ff691717ff774a31ff774a31ff774a31cdcdcdcdcdcdcdcdcdcdcdcdff774a31ff774a31ff774a31ff774a31ff4a593dff4a593dff4a593dff691717ff691717ff691717ff774a31ff774a31ff774a31cdcdcdcdcdcdcdcdcdcdcdcdff774a31ff774a31ff774a31ff774a31ff4a593dff4a593dff4a593dff691717ff691717ff691717ff774a31ff774a31ff774a31cdcdcdcdcdcdcdcdcdcdcdcdff4a593dff4a593dff4a593dff4a593dcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdff4a593dff4a593dff4a593dff4a593dcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdff4a593dff4a593dff4a593dff4a593dcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd
   m_StreamData:
+    serializedVersion: 2
     offset: 0
     size: 0
     path: 
 --- !u!21 &-4622736124085790156
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Root
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -369,6 +409,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -389,3 +430,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
