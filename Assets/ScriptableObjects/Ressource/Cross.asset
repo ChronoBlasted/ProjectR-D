@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 563aff294ebfbef44ab51c3276245904, type: 3}
-  m_Name: Bible
+  m_Name: Cross
   m_EditorClassIdentifier: 
-  Type: 201
-  Name: Bible
+  Type: 2
+  Name: Cross
   Sprite: {fileID: 0}
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 3259602396574605494, guid: 5f5bdc83b8d1a514881d883eb976884f, type: 3}
