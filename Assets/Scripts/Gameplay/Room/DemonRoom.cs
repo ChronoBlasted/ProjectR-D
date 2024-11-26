@@ -20,15 +20,15 @@ public class DemonRoom : Room
             {
                 Candle candle = other.GetComponent<Candle>();
 
-                if (candle.type == Candle.Type.Priest) return;
+                if (candle.camp == Candle.Camp.Priest) return;
 
                 QuestManager.Instance.demonQuest.UpdateQuest(-1);
 
                 if (QuestManager.Instance.demonQuest.amountToCollect <= 0)
                 {
-                    GameManager.Instance.UpdateStateToEnd();
-
                     UIManager.Instance.EndGameView.UpdateData(false);
+
+                    GameManager.Instance.UpdateStateToEnd();
                 }
             }
         }
@@ -48,7 +48,7 @@ public class DemonRoom : Room
             {
                 Candle candle = other.GetComponent<Candle>();
 
-                if (candle.type == Candle.Type.Priest) return;
+                if (candle.camp == Candle.Camp.Priest) return;
 
                 QuestManager.Instance.demonQuest.UpdateQuest(1);
             }

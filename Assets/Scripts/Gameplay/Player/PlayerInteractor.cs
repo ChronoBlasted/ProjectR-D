@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-//using UnityEngine.UI;
+
 using TMPro;
 
 public class PlayerInteractor : MonoBehaviour
@@ -12,10 +12,12 @@ public class PlayerInteractor : MonoBehaviour
     public Transform hand, Eye;
     public TextMeshProUGUI interactionText;
     [SerializeField] LayerMask myInteractionLayer;
-    Ray ray;
+    public PlayerRole pRole;
+    public Material outlineMat;
+
     public void Awake()
     {
-        //ray = new Ray(Eye.transform.position, Eye.transform.forward);
+        pRole = GetComponent<PlayerRole>();
     }
 
     public void Update()
@@ -26,43 +28,53 @@ public class PlayerInteractor : MonoBehaviour
             {
                 if (item != interactObject)
                 {
-                    interactObject = item;
+                    SetInteractObjectNull();
                     
-                    if(handObject)
-                        interactionText.text = item.SetActionDebug(handObject);
-                    else
-                        interactionText.text = item.SetActionDebug();
+                    interactObject = item;
+                    interactObject.SetActionDebug(false, this);
 
+                    if(handObject)
+                        interactionText.text = item.SetActionDebug(true ,this);
+
+                    else
+                        interactionText.text = item.SetActionDebug(true, this);
                 }
             }
             else// Si l'objet est du décor
             {
+                SetInteractObjectNull();
 
-                interactObject = null;
-                    if(handObject)
-                        interactionText.text = handObject.SetActionDebug(handObject);
-                    else
-                        interactionText.text = null;
+                if(handObject)
+                    interactionText.text = handObject.SetActionDebug(true, this);
+                else
+                    interactionText.text = null;
             } 
         }
         else // Si on vise dans le vide
         {
-            if (interactObject)
-                interactObject = null;
-
-                interactionText.text = null;
+            SetInteractObjectNull();           
+            interactionText.text = null;
         }
     }
 
-    public void SetInteractText(string str)
-    { 
-    
+    public void SetInteractObjectNull()
+    {
+        if(interactObject)
+            interactObject.RemoveOutline();
+        
+        interactObject = null;
     }
 
-     public void SetObjectToInteract()
+
+    public void SetInteractText(string str)
+    { 
+        
+    }
+
+    public void SetObjectToInteract()
     {        
         if (interactObject)
-        {                        
+        {   
             Interaction = interactObject.myAction;
         }
         else if (handObject)
@@ -70,12 +82,14 @@ public class PlayerInteractor : MonoBehaviour
             Interaction = handObject.myAction;
         }        
     }
+
     public void PickObject(Item obj)
     {
         handObject = obj;
         obj.transform.parent = hand;
         obj.transform.position = hand.position;        
     }
+
     public void DropObject(Item obj, Vector3 pos, Transform toParent = null)
     {
         obj.transform.SetParent(toParent,true);

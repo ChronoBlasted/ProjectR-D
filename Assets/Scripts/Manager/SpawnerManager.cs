@@ -25,6 +25,8 @@ public class SpawnerManager : MonoSingleton<SpawnerManager>
 
         var priestKeySpawn = keySpawnPoint[Random.Range(0, playerSpawnPoint.Count)];
 
+        keySpawnPoint.Remove(priestKeySpawn);
+
         demonKey.transform.position = demonKeySpawn.position;
         demonKey.transform.rotation = demonKeySpawn.rotation;
         demonKey.transform.parent = demonKeySpawn;

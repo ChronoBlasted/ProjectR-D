@@ -27,6 +27,8 @@ public abstract class View : MonoBehaviour
             _canvasGroup.blocksRaycasts = true;
             _canvasGroup.interactable = true;
         }).SetUpdate(UpdateType.Normal, true);
+
+        Debug.Log("Open", this);
     }
 
     public virtual void CloseView()
@@ -40,6 +42,9 @@ public abstract class View : MonoBehaviour
                 gameObject.SetActive(false);
             })
             .SetUpdate(UpdateType.Normal, true);
+
+        Debug.Log("Close", this);
+
     }
 
 }
