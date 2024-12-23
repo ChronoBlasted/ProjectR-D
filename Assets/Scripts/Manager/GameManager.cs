@@ -1,7 +1,6 @@
 using BaseTemplate.Behaviours;
 using DG.Tweening;
 using System;
-using UnityEditor.EditorTools;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
